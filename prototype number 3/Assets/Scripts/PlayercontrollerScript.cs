@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayercontrollerScript : MonoBehaviour
 {
 public float jumpForce = 5;
+public bool isOnGround = false;
 
 private Rigidbody2D _playerRB;
 
