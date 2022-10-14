@@ -8,11 +8,12 @@ public float jumpForce = 5;
 public bool isOnGround = false;
 
 private Rigidbody2D _playerRB;
-
+private Animator _playerAnim;
     // Start is called before the first frame update
     void Start()
     {
         _playerRB = GetComponent<Rigidbody2D> ();
+        _playerAnim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -22,6 +23,7 @@ private Rigidbody2D _playerRB;
       {
       _playerRB.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
       isOnGround = false;
+      _playerAnim.SetBool("IsOnGround, false");
       }
     }
 
@@ -30,6 +32,7 @@ private Rigidbody2D _playerRB;
         if(other.gameObject.CompareTag("Ground"))
         {
             isOnGround = true;
+            _playerAnim.SetBool("IsOnGround, true");
         }
     }
 }
