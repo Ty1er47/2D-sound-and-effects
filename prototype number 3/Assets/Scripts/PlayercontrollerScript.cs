@@ -6,7 +6,7 @@ public class PlayercontrollerScript : MonoBehaviour
 {
 public float jumpForce = 5;
 public bool isOnGround = false;
-
+public bool isGameOver
 private Rigidbody2D _playerRB;
 private Animator _playerAnim;
     // Start is called before the first frame update
@@ -19,11 +19,11 @@ private Animator _playerAnim;
     // Update is called once per frame
     void Update()
     {
-      if(Input.GetKeyDown(KeyCode.UpArrow) && isOnGround)  
+      if(Input.GetKeyDown(KeyCode.UpArrow) && isOnGround && !isGameOver)  
       {
       _playerRB.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
       isOnGround = false;
-      _playerAnim.SetBool("IsOnGround, false");
+      _playerAnim.SetBool("IsOnGround", false);
       }
     }
 
@@ -32,7 +32,11 @@ private Animator _playerAnim;
         if(other.gameObject.CompareTag("Ground"))
         {
             isOnGround = true;
-            _playerAnim.SetBool("IsOnGround, true");
+            _playerAnim.SetBool("IsOnGround", true);
+        }
+        else if(other.gameObject.CompareTag("Obsticles"))
+        {
+            isGameOver = true;
         }
     }
 }
