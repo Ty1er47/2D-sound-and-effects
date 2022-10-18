@@ -6,7 +6,7 @@ public class PlayercontrollerScript : MonoBehaviour
 {
 public float jumpForce = 5;
 public bool isOnGround = false;
-public bool isGameOver
+public bool isGameOver = false;
 private Rigidbody2D _playerRB;
 private Animator _playerAnim;
     // Start is called before the first frame update
@@ -37,6 +37,7 @@ private Animator _playerAnim;
         else if(other.gameObject.CompareTag("Obsticles"))
         {
             isGameOver = true;
+            _playerAnim.SetTrigger("Ishit");
         }
     }
 }

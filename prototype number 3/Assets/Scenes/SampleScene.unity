@@ -350,6 +350,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpForce: 10
   isOnGround: 0
+  isGameOver: 0
 --- !u!50 &776354043
 Rigidbody2D:
   serializedVersion: 4
@@ -562,11 +563,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1461819083
-  m_SortingLayer: 1
+  m_SortingLayerID: 82271353
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 0.31132078, g: 0.31132078, b: 0.31132078, a: 1}
+  m_Color: {r: 0.21493414, g: 0.29838693, b: 0.3962264, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -584,8 +585,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 873686209}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.08, y: -4.46, z: 0}
-  m_LocalScale: {x: 17.99886, y: 0.99997497, z: 1}
+  m_LocalPosition: {x: -0.08, y: -4.51, z: 0}
+  m_LocalScale: {x: 17.99886, y: 1.081273, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
