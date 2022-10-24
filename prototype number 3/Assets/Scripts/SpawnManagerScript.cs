@@ -19,7 +19,7 @@ public class SpawnManagerScript : MonoBehaviour
 
     // Update is called once per frame
     void SpawnObstacle()
-   { if(_playerscript.isGameOver == false)
+   { if(_playerScript.isGameOver == false)
     {
         Instantiate(obstaclePreFab, _spawnPos, obstaclePreFab.transform.rotation);
     }
